@@ -19,7 +19,7 @@ void em(); // empate
 void pe(); // jog. 00 >> pedra vence tesoura (1 e 3)
 void pa(); // jog. 00 >> papel vence pedra (2 e 1)
 void te(); // jog. 00 >> tesoura corta o papel (3 e 2)
-void placar(int x, int y, int z); // placar final >> vencedor final
+void placar(int x, int y); // placar final >> vencedor final
 void lines(int n); // linhas >> horizontais
 void vLines(int n, int x, int y); // linhas >> verticais com coordenadas
 
@@ -237,7 +237,7 @@ void jokempo(){
 		scanf(" %c", &op);
 	}while(toupper(op) == 'S');	
 	
-	placar(pP, pC, emp);
+	placar(pP, pC);
 }
 // condição de vitória
 	// Pedra ganha da tesoura (quebrando-a).
@@ -323,11 +323,8 @@ void te(){
 	vLines(3, 74, 4);
 }
 	//	placar final >> vencedor final
-void placar(int x, int y, int z){
+void placar(int x, int y){
 	int e = 144, n = 7, o = 12, p = 47, q = 3;
-	
-	info_02(x, y, z);
-	screen_012();
 	
 	gotoxy(p, o);
 	lines(n);
@@ -343,8 +340,8 @@ void placar(int x, int y, int z){
 	gotoxy(p + 2, 14);
 
 	if(x > y) printf(" PARAB%cNS, JOGADOR 01! ", e); // se jog. 01 vencer
-	else printf(" PARAB%cNS, JOGADOR 02! ", e); // se jog. 02 vencer
-	
+	else if(x < y) printf(" PARAB%cNS, JOGADOR 02! ", e); // se jog. 02 vencer
+	else printf(" OH N%cO. JOGO EMPATADO ", 199);
 	getch();
 
 	system("cls");
@@ -359,4 +356,4 @@ void vLines(int n, int x, int y){
 		gotoxy(x, y + i);
 		printf("%c", B);	
 	} 
-}
+}	
