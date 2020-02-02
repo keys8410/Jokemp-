@@ -25,26 +25,26 @@ void vLines(int n, int x, int y); // linhas >> verticais com coordenadas
 
 /* 
 	02 de fevereiro de 2020	
-    Departamento de T.I., UniProjeção (Taguatinga, Campus I)
+    Departamento de T.I., UniProjeÃ§Ã£o (Taguatinga, Campus I)
     
-    Sistemas de Informação (3º semestre)
+    Sistemas de InformaÃ§Ã£o (3Âº semestre)
     Autor: Yan Almeida Garcia
 
-	00) jokempô
-		No Janken-pon, os jogadores devem simultaneamente esticar a mão, na qual cada um formou um símbolo
+	00) jokempÃ´
+		No Janken-pon, os jogadores devem simultaneamente esticar a mÃ£o, na qual cada um formou um sÃ­mbolo
 		(que significa pedra, papel ou tesoura).
-		Então, os jogadores comparam os símbolos para decidir quem ganhou, da seguinte forma:
+		EntÃ£o, os jogadores comparam os sÃ­mbolos para decidir quem ganhou, da seguinte forma:
 
 		- Pedra ganha da tesoura (amassando-a ou quebrando-a);
 		- tesoura ganha do papel (cortando-o);
 		- papel ganha da pedra (embrulhando-a).
 
-		Caso dois jogadores façam o mesmo gesto, ocorre um empate, e geralmente se joga de novo até desempatar. 
-		Este jogo possui uma única regra: não é permitido mostrar pedra duas vezes seguidas.
+		Caso dois jogadores faÃ§am o mesmo gesto, ocorre um empate, e geralmente se joga de novo atÃ© desempatar. 
+		Este jogo possui uma Ãºnica regra: nÃ£o Ã© permitido mostrar pedra duas vezes seguidas.
 		
-		Referência bibliográfica:
-			[01]. "Pedra, papel e tesoura", disponível em: https://pt.wikipedia.org/wiki/Pedra,_papel_e_tesoura
-			[02]. "Colorindo texto e plano de fundo de programas em C no S.O. Windows", disponível em: "http://personalizandoc.blogspot.com/2012/11/colorindo-texto-e-plano-de-fundo.html"
+		ReferÃªncia bibliogrÃ¡fica:
+			[01]. "Pedra, papel e tesoura", disponÃ­vel em: https://pt.wikipedia.org/wiki/Pedra,_papel_e_tesoura
+			[02]. "Colorindo texto e plano de fundo de programas em C no S.O. Windows", disponÃ­vel em: "http://personalizandoc.blogspot.com/2012/11/colorindo-texto-e-plano-de-fundo.html"
 */
 
 
@@ -203,7 +203,7 @@ void jokempo(){
 
 				break;
 		}
-			// condiçoes para vencer >> player x CPU
+			// condiÃ§oes para vencer >> player x CPU
 		if(player == 1 && cpu == 3){ 
 			pe();
 			pP++;
@@ -239,7 +239,7 @@ void jokempo(){
 	
 	placar(pP, pC, emp);
 }
-// condição de vitória
+// condiÃ§Ã£o de vitÃ³ria
 	// Pedra ganha da tesoura (quebrando-a).
 	// Tesoura ganha do papel (cortando-o).
 	// Papel ganha da pedra (embrulhando-a). 
@@ -359,4 +359,4 @@ void vLines(int n, int x, int y){
 		gotoxy(x, y + i);
 		printf("%c", B);	
 	} 
-}	
+}
